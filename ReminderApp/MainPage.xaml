@@ -38,11 +38,11 @@
 
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Cool!" IsVisible="True"/>
 
-        <CollectionView ItemsSource="{Binding AllNotes}" Grid.Row="3">
+        <CollectionView ItemsSource="{Binding AllNotes}" Grid.Row="3" Grid.ColumnSpan="2">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Label Text="{Binding .}"/>
+                        <Label Text="{Binding .}" FontSize="Title" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

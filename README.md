@@ -30,3 +30,5 @@ Model = Data and backend
 View = UI
 View Models = "Brains" or Application logic, Automatic updating of properties, Automatic firing of commands.
 
+Followed the code in the 6th video. There were some errors with the example, but a guy in the comments pointed out the issues. 
+I have gotten buttons, textbox, images and a user generated list going. Done for the day, but I will continue this tomorrow.
