@@ -3,14 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ReminderApp.ViewModels"
              mc:Ignorable="d"
              x:Class="ReminderApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="icons8" BackgroundColor="PowderBlue"
+               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+        <Editor Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"
+                Placeholder="Enter Note Here" Margin="10,10"
+                Text="{Binding TheNote}"/>
+
+        <Button Grid.Row="2" Grid.Column="0" Text="Save"
+                Margin="10, 0" Command="{Binding SaveCommand}"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="Delete"
+                Margin="10, 0" Command="{Binding EraseCommand}}"/>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Cool!" IsVisible="True"/>
+
+        <CollectionView ItemsSource="{Binding AllNotes}" Grid.Row="3">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding .}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
 
 </ContentPage>
