@@ -32,3 +32,11 @@ View Models = "Brains" or Application logic, Automatic updating of properties, A
 
 Followed the code in the 6th video. There were some errors with the example, but a guy in the comments pointed out the issues. 
 I have gotten buttons, textbox, images and a user generated list going. Done for the day, but I will continue this tomorrow.
+
+Apr 26, 2020
+I lied about continueing 'tomorrow'. Decided it was a lazy Saturday instead. 
+
+Started to go through video 7 out of 11. There is a large amount of changes to the code and errors that are popping up. I don't want to spend
+time trying to figure out how to fix these errors when I am trying to learn new things. This specific project is being put on hold and 
+I will start a new Xamarin course.
+
